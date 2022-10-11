@@ -5,7 +5,6 @@ import {
   counterIncrement,
   counterSetStep
 } from '../../actions/actionCreator'
-import ACTION_TYPES from '../../actions/actionTypes'
 
 function Counter (props) {
   const { count, step, increment, decrement, setStep } = props
@@ -21,7 +20,7 @@ function Counter (props) {
 }
 
 const mapStateToProps = state => {
-  return state
+  return state.counter
 }
 
 const mapDispatchToProps = dispatch => {
