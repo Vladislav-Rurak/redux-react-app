@@ -1,5 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {
+  counterDecrement,
+  counterIncrement,
+  counterSetStep
+} from '../../actions/actionCreator'
+import ACTION_TYPES from '../../actions/actionTypes'
 
 function Counter (props) {
   const { count, step, increment, decrement, setStep } = props
@@ -21,13 +27,13 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     increment: () => {
-      dispatch({ type: 'increment' })
+      dispatch(counterIncrement())
     },
     decrement: () => {
-      dispatch({ type: 'decrement' })
+      dispatch(counterDecrement())
     },
     setStep: ({ target: { value } }) => {
-      dispatch({ type: 'setStep', newStep: Number(value) })
+      dispatch(counterSetStep(Number(value)))
     }
   }
 }
