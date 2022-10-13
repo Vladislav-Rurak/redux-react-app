@@ -1,11 +1,9 @@
-import Counter from './components/Counter'
-import ThemeSwitcher from './components/ThemeSwitcher'
+import UserInfo from './components/UserInfo'
 
 function App () {
   return (
     <>
-      <Counter />
-      <ThemeSwitcher />
+      <UserInfo />
     </>
   )
 }
